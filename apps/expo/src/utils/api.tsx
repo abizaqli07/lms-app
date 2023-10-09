@@ -39,11 +39,6 @@ const getBaseUrl = () => {
   return `http://${localhost}:3000`;
 };
 
-/**
- * A wrapper for your app that provides the TRPC context.
- * Use only in _app.tsx
- */
-
 export function TRPCProvider(props: { children: React.ReactNode }) {
   const [queryClient] = React.useState(() => new QueryClient());
   const [trpcClient] = React.useState(() =>
